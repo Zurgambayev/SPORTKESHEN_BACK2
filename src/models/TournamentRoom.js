@@ -11,7 +11,6 @@ const tournamentRoomSchema = new mongoose.Schema({
     formatPlay: { type: String, enum: ["5x5", "6x6"], required: true },
     tournamentAiOr: {type:String, enum:["ИИ", "Без ИИ"]},
     teamCount: {type:Number,default:0},
-    allPlayers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'RoomParticipant' }],
     isClosed: {type:Boolean, default:false}
 },{timestamps:true});
 
